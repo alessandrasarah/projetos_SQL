@@ -61,11 +61,8 @@
 | --- | ---------- | ---------- | ------ |
 | 101 | 1          | 2024-01-10 | 250.00 |
 
----
 **Query #2**
 
-    
-    
     select cliente_id, media
     from (
       select cliente_id, avg(valor) as media
@@ -78,12 +75,6 @@
 | ---------- | -------------------- |
 | 2          | 150.0000000000000000 |
 | 1          | 175.0000000000000000 |
-
----
-
-[View on DB Fiddle](https://www.db-fiddle.com/)
-
-
 
 **Query #3**
 
@@ -98,11 +89,9 @@
 | ----- |
 | Maria |
 
----CTE
-
 **Query #4**
 
-    -- criando cte
+    -- Criando cte
     with total_por_clientes as(
       select
       cliente_id,
@@ -129,8 +118,7 @@
 --- FUNÇÕES JANELA
 
 --Analisar a evolução das compras dos clientes ao longo do tempo
-
-
+--Função coalesce para substituir valores nulos
 
 **Query #5**
 
@@ -155,10 +143,6 @@
 | João  | 150.00 | 2       |
 | Ana   | 0      | 3       |
 
----
-
-
-
 **Query #6**
 
     select
@@ -177,10 +161,6 @@
 | 1          | 2024-03-20 | 100.00 | 250.00   |
 | 2          | 2024-02-15 | 150.00 |          |
 
----
-
-
-
 **Query #7**
 
     select cliente_id, data, valor,
@@ -192,8 +172,6 @@
 | 1          | 2024-01-10 | 250.00 | 1               |
 | 1          | 2024-03-20 | 100.00 | 2               |
 | 2          | 2024-02-15 | 150.00 | 1               |
-
-
 
 **Query #8**
 
@@ -213,8 +191,6 @@
 | 1          | 2024-01-10 | 250.00 | 100.00         |
 | 1          | 2024-03-20 | 100.00 |                |
 | 2          | 2024-02-15 | 150.00 |                |
-
----
 
 **Query #9**
 
@@ -262,7 +238,5 @@
 | Maria | 350.00 | 1       | 250.00      |
 | João  | 150.00 | 2       | 150.00      |
 
----
 
-[View on DB Fiddle](https://www.db-fiddle.com/)
 
